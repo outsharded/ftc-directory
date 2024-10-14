@@ -24,22 +24,22 @@ const SideMenu: React.FC = () => {
           <nav className={`nav ${isMenuOpen ? 'block' : 'hidden lg:block'}`}>
             <div className="text-2xl font-bold">
             <div className='py-1'>
-              <Link href="/team" className="p-2 hover:bg-gray-700 rounded outline-1" prefetch={true}>
+              <Link href="/" className="p-2 hover:bg-gray-700 rounded outline-1" prefetch={true}>
                 General
               </Link>
             </div> 
             <div className='py-1'>
-              <Link href="/" className="p-2 hover:bg-gray-700 rounded outline-1" prefetch={true}>
+              <Link href="/programming" className="p-2 hover:bg-gray-700 rounded outline-1" prefetch={true}>
                 Programming
               </Link>
             </div>     
             <div className='py-1'>
-              <Link href="/awards" className="p-2 hover:bg-gray-700 rounded outline-1" prefetch={true}>
+              <Link href="/rules" className="p-2 hover:bg-gray-700 rounded outline-1" prefetch={true}>
                 Rules
               </Link> 
             </div>
             <div className='py-1'>
-              <Link href="/team" className="p-2 hover:bg-gray-700 rounded outline-1" prefetch={true}>
+              <Link href="/cad" className="p-2 hover:bg-gray-700 rounded outline-1" prefetch={true}>
                 CAD
               </Link>
             </div>              
