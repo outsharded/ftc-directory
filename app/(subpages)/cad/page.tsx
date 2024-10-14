@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SideMenu from "../../sideMenu";
 import Link from 'next/link'
 
