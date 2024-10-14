@@ -18,9 +18,9 @@ export default function Home() {
         </thead>
         <tbody>
           <tr>
-            <td className="px-2 border border-slate-700 font-bold">Game Manual 0</td>
-            <td className="px-2 border border-slate-700 "><Link href="https://gm0.org/">gm0.org</Link></td>  
-            <td className="px-2 border border-slate-700 ">Information on almost all aspects of FTC, with programming, design and outreach information.</td>
+            <td className="px-2 border border-slate-700 font-bold">Onshape</td>
+            <td className="px-2 border border-slate-700 "><Link href="https://www.onshape.com/en/">onshape.com</Link></td>  
+            <td className="px-2 border border-slate-700 ">Cloud based CAD software with a free plan for students ands teachers. Common in FTC</td>
           </tr>
           <tr>
             <td className="px-2 border border-slate-700 ">Portfolio Archive</td>

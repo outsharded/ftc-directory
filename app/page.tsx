@@ -25,7 +25,7 @@ export default function Home() {
           <tr>
             <td className="px-2 border border-slate-700 ">Portfolio Archive</td>
             <td className="px-2 border border-slate-700"><Link href="https://portfolios.hivemindrobotics.net">portfolios.hivemindrobotics.net</Link></td>
-            <td className="px-2 border border-slate-700 ">The Eagles</td>
+            <td className="px-2 border border-slate-700 ">An archive of award winning Engineering Portfolios</td>
           </tr>
           <tr>
             <td className="px-2 border border-slate-700 ">FTC Scout</td>
