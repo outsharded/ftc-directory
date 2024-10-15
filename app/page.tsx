@@ -23,6 +23,16 @@ export default function Home() {
             <td className="px-2 border border-slate-700 ">Information on almost all aspects of FTC, with programming, design and outreach information.</td>
           </tr>
           <tr>
+            <td className="px-2 border border-slate-700 ">FTC Discord</td>
+            <td className="px-2 border border-slate-700 "><Link href="https://discord.com/invite/first-tech-challenge/">discord.com</Link></td>
+            <td className="px-2 border border-slate-700 ">Community of students in FTC.</td>
+          </tr>
+          <tr>
+            <td className="px-2 border border-slate-700 ">FTC Docs</td>
+            <td className="px-2 border border-slate-700 "><Link href="https://ftc-docs.firstinspires.org/">ftc-docs.firstinspires.org</Link></td>
+            <td className="px-2 border border-slate-700 ">Information on many aspects of the competition, from FIRST.</td>
+          </tr>
+          <tr>
             <td className="px-2 border border-slate-700 ">Portfolio Archive</td>
             <td className="px-2 border border-slate-700"><Link href="https://portfolios.hivemindrobotics.net">portfolios.hivemindrobotics.net</Link></td>
             <td className="px-2 border border-slate-700 ">An archive of award winning Engineering Portfolios</td>
@@ -30,7 +40,6 @@ export default function Home() {
           <tr>
             <td className="px-2 border border-slate-700 ">FTC Scout</td>
             <td className="px-2 border border-slate-700 "><Link href="https://ftcscout.org/">ftcscout.org</Link></td>
-            
             <td className="px-2 border border-slate-700 ">Get information about teams and events</td>
           </tr>
         </tbody>
