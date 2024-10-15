@@ -12,7 +12,7 @@ const SideMenu: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-800 h-screen w-64 text-zinc-200">
+    <div className={`bg-gray-800 h-screen text-zinc-200 ${isMenuOpen ? 'w-64' : 'w-24'}`}>
 
       <div className={`basis-1/2 flex items-center ${isMenuOpen ? 'hidden' : ''}`}>
       <Image src={logo} alt="Powercut Robotics Team Logo" sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 33vw" className='w-24 p-4'/>
