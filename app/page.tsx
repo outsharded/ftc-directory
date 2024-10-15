@@ -18,27 +18,27 @@ export default function Home() {
         </thead>
         <tbody>
           <tr>
-            <td className="px-2 border border-slate-700 font-bold">Game Manual 0</td>
+            <td className="px-2 border border-slate-700 font-bold"><Link href="https://gm0.org/">Game Manual 0</Link></td>
             <td className="px-2 border border-slate-700 "><Link href="https://gm0.org/">gm0.org</Link></td>  
             <td className="px-2 border border-slate-700 ">Information on almost all aspects of FTC, with programming, design and outreach information.</td>
           </tr>
           <tr>
-            <td className="px-2 border border-slate-700 ">FTC Discord</td>
+            <td className="px-2 border border-slate-700 font-bold"><Link href="https://discord.com/invite/first-tech-challenge/">FTC Discord</Link></td>
             <td className="px-2 border border-slate-700 "><Link href="https://discord.com/invite/first-tech-challenge/">discord.com</Link></td>
             <td className="px-2 border border-slate-700 ">Community of students in FTC.</td>
           </tr>
           <tr>
-            <td className="px-2 border border-slate-700 ">FTC Docs</td>
+            <td className="px-2 border border-slate-700 font-bold"><Link href="https://ftc-docs.firstinspires.org/">FTC Docs</Link></td>
             <td className="px-2 border border-slate-700 "><Link href="https://ftc-docs.firstinspires.org/">ftc-docs.firstinspires.org</Link></td>
             <td className="px-2 border border-slate-700 ">Information on many aspects of the competition, from FIRST.</td>
           </tr>
           <tr>
-            <td className="px-2 border border-slate-700 ">Portfolio Archive</td>
+            <td className="px-2 border border-slate-700 font-bold"><Link href="https://portfolios.hivemindrobotics.net">Portfolio Archive</Link></td>
             <td className="px-2 border border-slate-700"><Link href="https://portfolios.hivemindrobotics.net">portfolios.hivemindrobotics.net</Link></td>
             <td className="px-2 border border-slate-700 ">An archive of award winning Engineering Portfolios</td>
           </tr>
           <tr>
-            <td className="px-2 border border-slate-700 ">FTC Scout</td>
+            <td className="px-2 border border-slate-700 font-bold"><Link href="https://ftcscout.org/">FTC Scout</Link></td>
             <td className="px-2 border border-slate-700 "><Link href="https://ftcscout.org/">ftcscout.org</Link></td>
             <td className="px-2 border border-slate-700 ">Get information about teams and events</td>
           </tr>
