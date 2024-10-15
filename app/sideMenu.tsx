@@ -16,7 +16,7 @@ const SideMenu: React.FC = () => {
 
       <div className={`basis-1/2 flex items-center ${isMenuOpen ? 'hidden' : ''}`}>
       <Image src={logo} alt="Powercut Robotics Team Logo" sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 33vw" className='w-24 p-4'/>
-        <h1 className={`absloute left-32 px-2 text-3xl font-bold align-middle hidden lg:visible ${isMenuOpen ? 'hidden' : ''}`}>FTC Directory</h1>
+        <h1 className={`absloute left-32 px-2 text-3xl font-bold align-middle invisible lg:visible ${isMenuOpen ? 'invisible' : ''}`}>FTC Directory</h1>
         
       </div>
       <div className="md:basis-3/5 justify-start w-full le">
