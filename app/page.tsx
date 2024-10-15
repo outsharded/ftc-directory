@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
    <div className="min-h-screen flex bg-gray-900 text-zinc-200">
-    <div className="fixed top-0 left-0 z-10 h-screen w-64">
+    <div className="fixed top-0 left-0 z-10 h-screen w-24 lg:w-64">
       <SideMenu />
     </div>
     <div className="absolute left-24 lg:left-64 p-10 text-2xl">
