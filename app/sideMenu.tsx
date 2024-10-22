@@ -20,6 +20,7 @@ const SideMenu: React.FC = () => {
             </svg>
           </button>
         </div>
+
       <div className={`basis-1/2 flex items-center ${isMenuOpen ? 'hidden' : ''}`}>
         <Image src={logo} alt="Powercut Robotics Team Logo" sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 33vw" className={`absolute top-12 lg:top-1 w-16 lg:w-24 p-2`}/>
         <h1 className={`absolute left-24 top-4 px-2 text-3xl font-bold align-middle invisible lg:visible ${isMenuOpen ? 'invisible' : ''}`}>FTC Directory</h1>  
