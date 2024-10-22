@@ -12,7 +12,7 @@ const SideMenu: React.FC = () => {
   };
 
   return (
-    <div className={`bg-gray-800 min-h-screen min-w-screen text-zinc-200 ${isMenuOpen ? 'w-64' : 'w-16'} lg:w-64`}>
+    <div className={`bg-neutral-400 text-gray-900 dark:bg-gray-800 min-h-screen min-w-screen dark:text-zinc-200 ${isMenuOpen ? 'w-64' : 'w-16'} lg:w-64`}>
        <div className={`lg:hidden absolute left-2 top-1`}>
           <button id='menu' aria-label="menu" onClick={toggleMenu} className="focus:outline-none">
             <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -30,23 +30,23 @@ const SideMenu: React.FC = () => {
           <nav className={`nav ${isMenuOpen ? 'block' : 'hidden lg:block'}`}>
             <div className="text-2xl font-bold">
             <div className='py-1'>
-              <Link href="/" className="p-2 hover:bg-gray-700 hover:border border-yellow-700 rounded outline-1" prefetch={true}>
+              <Link href="/" className="p-2 hover:bg-gray-700 hover:border border-powercut_pink_contrast rounded outline-1" prefetch={true}>
                 General
               </Link>
             </div> 
             <div className='py-1'>
-              <Link href="/programming" className="p-2 hover:bg-gray-700 rounded outline-1" prefetch={true}>
+              <Link href="/programming" className="p-2 hover:bg-gray-700 hover:border border-powercut_pink_contrast rounded outline-1" prefetch={true}>
                 Programming
               </Link>
             </div>     
             <div className='py-1'>
-              <Link href="/rules" className="p-2 hover:bg-gray-700 rounded outline-1" prefetch={true}>
+              <Link href="/rules" className="p-2 hover:bg-gray-700 hover:border border-powercut_pink_contrast rounded outline-1" prefetch={true}>
                 Rules
               </Link> 
             </div>
             <div className='py-1'>
-              <Link href="/cad" className="p-2 hover:bg-gray-700 rounded outline-1" prefetch={true}>
-                CAD
+              <Link href="/design" className="p-2 hover:bg-gray-700 hover:border border-powercut_pink_contrast rounded outline-1" prefetch={true}>
+                Design
               </Link>
             </div>              
             </div>
