@@ -8,9 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'kida': ['BD_Plakatbau', 'sans-serif'],
+        'okcomputer': ['Microgramma', 'sans-serif'],
+        'avenir': ['avenir', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        powercut_yellow:'#F5C249',
+        powercut_pink:'#FF5757',
+        powercut_pink_contrast: '#FF6B6B',
+        dark_bg_box: '#0a0a0a',
       },
     },
   },
