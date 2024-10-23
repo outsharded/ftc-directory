@@ -7,7 +7,7 @@ export default function Home() {
     <div className="fixed top-0 left-0 z-10 h-screen w-64">
       <SideMenu />
     </div>
-    <div className="absolute left-64 p-10 text-2xl">
+    <div className="absolute left-16 lg:left-64 p-10 text-2xl">
     <h2 className="text-3xl font-bold py-2">General</h2>
       <table className="table-auto border-collapse border border-slate-500">
         <thead>
