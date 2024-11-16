@@ -22,7 +22,12 @@ export default function Home() {
     { id: 8, name: "Misumi Slide Insert", url: "https://cad.onshape.com/documents/4f3446e64b18f76af4773a36/w/84d84ca5d4800093934b8589/e/afcb59626f0f14a756e1ca55", description: "Generator for inserts for using MISUMI SAR2/3xx slides." },
     { id: 9, name: "Intake Centre Generator", url: "https://cad.onshape.com/documents/0267c13a508c61819e4973b4/w/670e913cf8aec1a5d4745c33/e/1dd12bd2829f9d7d9aa8783a", description: "Generator for mounting tube to an axle to intake." },
   ];
-
+  
+  const vendorsSites = [
+    { id: 10, name: "REV Robotics", url: "https://www.revrobotics.com", description: "Common build system. Makes the control hub." },
+    { id: 11, name: "GoBilda", url: "https://www.gobilda.com", description: "Common build system. Makes viper slides." },
+    { id: 12, name: "AndyMark", url: "https://www.andymark.com", description: "Common build system. Makes the game field." },
+  ];
   const [openDropdown, setOpenDropdown] = useState<number | null>(null); // Track the ID of the open dropdown
 
   const toggleDropdown = (id: number) => {
@@ -95,6 +100,14 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-stone-900 dark:text-zinc-100 mb-4">Onshape Parts</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
           {renderSites(onshapePartsSites)}
+        </div>
+
+        <div className="h-10"></div>
+
+{/* Vendors Section */}
+        <h2 className="text-3xl font-bold text-stone-900 dark:text-zinc-100 mb-4">Vendors</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+          {renderSites(vendorsSites)}
         </div>
       </div>
     </div>
