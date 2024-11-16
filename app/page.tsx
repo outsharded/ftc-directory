@@ -1,57 +1,77 @@
+"use client"
+import { useState } from 'react'; // Import useState
 import SideMenu from "./sideMenu";
-import Link from 'next/link'
+import Link from 'next/link';
 
-export default function Home() {
-  return (
-   <div className="min-h-screen h-screen max-w-screen w-screen flex bg-stone-200 text-gray-900 dark:bg-gray-900 dark:text-zinc-200">
-    <div className="fixed top-0 left-0 z-10 h-screen w-24 md:w-64">
-      <SideMenu />
-    </div>
-    <div className="absolute left-16 md:left-64 p-3 md:p-10 text-2xl">
-    <h2 className="text-3xl font-bold py-2">General</h2>
-      <table className="table-auto border-collapse border border-slate-500">
-        <thead>
-          <tr className="text-2xl font-bold bg-stone-300 dark:bg-slate-700">
-            <th className="px-2 border border-slate-600">Name</th>
-            <th className="px-2 border hidden lg:table-cell border-slate-600">Link</th>
-            <th className="px-2 border border-slate-600">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="px-2 border border-slate-700 underline md:no-underline font-bold"><Link href="https://discord.com/invite/first-tech-challenge/">FTC Discord</Link></td>
-            <td className="px-2 border border-slate-700 hidden lg:table-cell underline"><Link href="https://discord.com/invite/first-tech-challenge/">discord.com</Link></td>
-            <td className="px-2 border border-slate-700 hidden md:table-cell">Community of students in FTC. Exceptionally useful.</td>
-            <td className="px-2 border border-slate-700 table-cell md:hidden">Student community.</td>
-          </tr>
-          <tr>
-            <td className="px-2 border border-slate-700 underline md:no-underline font-bold"><Link href="https://gm0.org/">Game Manual 0</Link></td>
-            <td className="px-2 border border-slate-700 hidden lg:table-cell underline"><Link href="https://gm0.org/">gm0.org</Link></td>  
-            <td className="px-2 border border-slate-700 hidden md:table-cell">Information on almost all aspects of FTC.</td>
-            <td className="px-2 border border-slate-700 table-cell md:hidden">General information.</td>
-          </tr>
-          <tr>
-            <td className="px-2 border border-slate-700 underline md:no-underline font-bold"><Link href="https://ftc-docs.firstinspires.org/">FTC Docs</Link></td>
-            <td className="px-2 border border-slate-700 hidden lg:table-cell underline"><Link href="https://ftc-docs.firstinspires.org/">ftc-docs.firstinspires.org</Link></td>
-            <td className="px-2 border border-slate-700 hidden md:table-cell hover:table-cell">Information on many aspects of the competition, from FIRST.</td>
-            <td className="px-2 border border-slate-700 table-cell md:hidden hover:hidden">General information.</td>
-          </tr>
-          <tr>
-            <td className="px-2 border border-slate-700 underline md:no-underline font-bold"><Link href="https://portfolios.hivemindrobotics.net">Portfolio Archive</Link></td>
-            <td className="px-2 border border-slate-700 hidden lg:table-cell underline"><Link href="https://portfolios.hivemindrobotics.net">portfolios.hivemindrobotics.net</Link></td>
-            <td className="px-2 border border-slate-700 hidden md:table-cell">An archive of award winning Engineering Portfolios.</td>
-            <td className="px-2 border border-slate-700 table-cell md:hidden">Example Portfolios.</td>
-          </tr>
-          <tr>
-            <td className="px-2 border border-slate-700 underline md:no-underline font-bold"><Link href="https://ftcscout.org/">FTC Scout</Link></td>
-            <td className="px-2 border border-slate-700 hidden lg:table-cell underline"><Link href="https://ftcscout.org/">ftcscout.org</Link></td>
-            <td className="px-2 border border-slate-700 hidden md:table-cell">Information about teams and events.</td>
-            <td className="px-2 border border-slate-700 table-cell md:hidden">Team information.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-   </div>
-  );
+interface Site {
+  name: string;
+  url: string;
+  description: string;
 }
 
+export default function Home() {
+  const sites: Site[] = [
+    { name: "FTC Discord", url: "https://discord.com/invite/first-tech-challenge/", description: "Community of students in FTC. Exceptionally useful." },
+    { name: "Game Manual 0", url: "https://gm0.org/", description: "Information on almost all aspects of FTC." },
+    { name: "FTC Docs", url: "https://ftc-docs.firstinspires.org/", description: "Information on many aspects of the competition, from FIRST." },
+    { name: "Portfolio Archive", url: "https://portfolios.hivemindrobotics.net", description: "An archive of award winning Engineering Portfolios." },
+    { name: "FTC Scout", url: "https://ftcscout.org/", description: "Information about teams and events." }
+  ];
+
+  const [openSite, setOpenSite] = useState<number | null>(null);
+
+  const toggleDropdown = (index: number) => {
+    if (openSite === index) {
+      setOpenSite(null); // Close if already open
+    } else {
+      setOpenSite(index); // Open the clicked site
+    }
+  };
+
+  return (
+    <div className="min-h-screen w-screen bg-stone-200 dark:bg-gray-900 text-gray-900 dark:text-zinc-200 flex">
+      <div className="fixed top-0 left-0 z-10 w-16 md:w-64 transition-width duration-300">
+        <SideMenu />
+      </div>
+      <div className="ml-16 md:ml-64 p-5 md:p-10 w-full">
+        <h2 className="text-3xl font-bold text-stone-900 dark:text-zinc-100 mb-4">General</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+          {sites.map((site, index) => (
+            <div key={index} className="relative group w-full max-w-xs mx-auto">
+              <Link href={site.url}>
+                <div className="bg-indigo-700 text-white text-center py-10 px-4 rounded-md cursor-pointer hover:bg-indigo-800 transition duration-300">
+                  <span className="text-xl opacity-100 md:group-hover:opacity-0 font-extrabold tracking-tight transition duration-300">{site.name}</span>
+                  {/* Hover overlay with background box */}
+                  <div className="absolute inset-0 bg-gray-800 bg-opacity-75 opacity-0 md:group-hover:opacity-100 flex items-center justify-center rounded-md transition duration-300">
+                    <div className="text-center text-white p-4 max-w-xs">
+                      <h4 className="text-lg font-semibold">{site.name}</h4>
+                      <p className="text-sm">{site.url}</p>
+                      <p className="text-xs mt-2">{site.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              {/* Mobile Dropdown Button */}
+              <button
+                className={`absolute top-0 right-0 text-white bg-indigo-700 hover:bg-indigo-800 h-full w-12 rounded-r flex items-center justify-center md:hidden`} 
+                onClick={() => toggleDropdown(index)}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {/* Mobile Dropdown Content */}
+              {openSite === index && (
+                <div className="z-20 absolute w-full bg-gray-800 text-white p-4 rounded-b-md transition duration-300">
+                  <h4 className="text-lg font-semibold">{site.name}</h4>
+                  <p className="text-sm">{site.url}</p>
+                  <p className="text-xs mt-2">{site.description}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
