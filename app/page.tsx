@@ -15,7 +15,8 @@ export default function Home() {
     { name: "Game Manual 0", url: "https://gm0.org/", description: "Information on almost all aspects of FTC." },
     { name: "FTC Docs", url: "https://ftc-docs.firstinspires.org/", description: "Information on many aspects of the competition, from FIRST." },
     { name: "Portfolio Archive", url: "https://portfolios.hivemindrobotics.net", description: "An archive of award winning Engineering Portfolios." },
-    { name: "FTC Scout", url: "https://ftcscout.org/", description: "Information about teams and events." }
+    { name: "FTC Scout", url: "https://ftcscout.org/", description: "Information about teams and events." },
+    { name: "Cookbook", url: "https://cookbook.dairy.foundation", description: "Common issues" }
   ];
 
   const [openSite, setOpenSite] = useState<number | null>(null);
