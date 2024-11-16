@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react"
 import type { Viewport } from 'next'
 import "./globals.css";
-import SideMenu from "./sideMenu";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
