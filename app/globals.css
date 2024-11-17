@@ -20,6 +20,35 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Grid container */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+
+/* Dropdown content */
+.dropdown-content {
+  background-color: #1f2937; /* Dark gray */
+  color: white;
+  padding: 16px;
+  border-top: 2px solid #4f46e5; /* Indigo border at top */
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+}
+
+.dropdown-content h4 {
+  font-size: 1.125rem; /* Larger heading */
+  font-weight: 600; /* Semi-bold */
+}
+
+.dropdown-content p {
+  font-size: 0.875rem; /* Smaller paragraph text */
+  margin-top: 0.5rem;
+}
+
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
