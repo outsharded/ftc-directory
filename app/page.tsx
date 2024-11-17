@@ -1,76 +1,48 @@
-"use client"
-import { useState } from 'react'; // Import useState
 import SideMenu from "./sideMenu";
-import Link from 'next/link';
 
-interface Site {
-  name: string;
-  url: string;
-  description: string;
-}
-
-export default function Home() {
-  const sites: Site[] = [
-    { name: "FTC Discord", url: "https://discord.com/invite/first-tech-challenge/", description: "Community of students in FTC. Exceptionally useful." },
-    { name: "Game Manual 0", url: "https://gm0.org/", description: "Information on almost all aspects of FTC." },
-    { name: "FTC Docs", url: "https://ftc-docs.firstinspires.org/", description: "Information on many aspects of the competition, from FIRST." },
-    { name: "Portfolio Archive", url: "https://portfolios.hivemindrobotics.net", description: "An archive of award winning Engineering Portfolios." },
-    { name: "FTC Scout", url: "https://ftcscout.org/", description: "Information about teams and events." },
-    { name: "Cookbook", url: "https://cookbook.dairy.foundation", description: "Common issues" }
-  ];
-
-  const [openSite, setOpenSite] = useState<number | null>(null);
-
-  const toggleDropdown = (index: number) => {
-    if (openSite === index) {
-      setOpenSite(null); // Close if already open
-    } else {
-      setOpenSite(index); // Open the clicked site
-    }
-  };
-
+export default function HomePage() {
   return (
-    <div className="min-h-screen w-screen bg-stone-200 dark:bg-gray-900 text-gray-900 dark:text-zinc-200 flex">
-      <div className="fixed top-0 left-0 z-10 w-16 md:w-64 transition-width duration-300">
+    <div className="min-h-screen bg-stone-200 text-gray-900 dark:bg-gray-900 dark:text-zinc-200">
+      <div className="fixed top-0 left-0 z-10 h-screen w-64">
         <SideMenu />
       </div>
-      <div className="ml-16 md:ml-64 p-5 md:p-10 w-full">
-        <h2 className="text-3xl font-bold text-stone-900 dark:text-zinc-100 mb-4">General</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
-          {sites.map((site, index) => (
-            <div key={index} className="relative group w-full max-w-xs mx-auto">
-              <Link href={site.url}>
-                <div className="bg-indigo-700 text-white text-center py-10 px-4 rounded-md cursor-pointer hover:bg-indigo-800 transition duration-300">
-                  <span className="text-xl opacity-100 md:group-hover:opacity-0 font-extrabold tracking-tight transition duration-300">{site.name}</span>
-                  {/* Hover overlay with background box */}
-                  <div className="absolute inset-0 bg-gray-800 bg-opacity-75 opacity-0 md:group-hover:opacity-100 flex items-center justify-center rounded-md transition duration-300">
-                    <div className="text-center text-white p-4 max-w-xs">
-                      <h4 className="text-lg font-semibold">{site.name}</h4>
-                      <p className="text-sm">{site.url}</p>
-                      <p className="text-xs mt-2">{site.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              {/* Mobile Dropdown Button */}
-              <button
-                className={`absolute top-0 right-0 text-white bg-indigo-700 hover:bg-indigo-800 h-full w-12 rounded-r flex items-center justify-center md:hidden`} 
-                onClick={() => toggleDropdown(index)}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {/* Mobile Dropdown Content */}
-              {openSite === index && (
-                <div className="z-20 absolute w-full bg-gray-800 text-white p-4 rounded-b-md transition duration-300">
-                  <h4 className="text-lg font-semibold">{site.name}</h4>
-                  <p className="text-sm">{site.url}</p>
-                  <p className="text-xs mt-2">{site.description}</p>
-                </div>
-              )}
-            </div>
-          ))}
+      <div className="absolute left-16 lg:left-64 p-10">
+        <div className="text-2xl leading-relaxed">
+          <h1 className="text-4xl font-bold mb-5">Welcome to the FTC Directory by Powercut Robotics</h1>
+          <p className="mb-5">
+            This website is designed to signpost teams to useful resources that 
+            they may not have found otherwise. Whether you're a rookie team just 
+            starting out or a veteran looking for a competitive edge, we've curated 
+            a selection of links and tools to help you on your FIRST Tech Challenge 
+            journey.
+          </p>
+          <p className="mb-5">
+            Powercut Robotics is Team #25268, UK-497, and based in South London. 
+            Our rookie year was during the 2023–24 Centerstage season. Beyond competing, 
+            we're also a championship organization, hosting regional events and scrimmages 
+            to support the FTC community.
+          </p>
+          <h2 className="text-3xl font-bold mt-10 mb-3">Contact Us</h2>
+          <p className="mb-5">
+            Have a suggestion for a resource we should include? We'd love to hear from you! 
+            Please email us at{" "}
+            <a
+              href="mailto:info@powercut-robotics.org"
+              className="text-blue-500 underline"
+            >
+              info@powercut-robotics.org
+            </a>
+            , or send a message to{" "}
+            <a
+              href="https://discordapp.com/users/outsharded"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline"
+            >
+              @outsharded
+            </a>{" "}
+            on Discord.
+          </p>
         </div>
       </div>
     </div>

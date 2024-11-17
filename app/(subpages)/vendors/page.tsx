@@ -3,29 +3,31 @@ import { useState } from 'react'; // Import useState
 import SideMenu from "../../sideMenu";
 import Link from 'next/link';
 
-export default function PageName() {
-  // Define the sites for the page, grouped by category with unique IDs
-  const generalSites = [
-    { id: 1, name: "FTC Docs (Blocks)", url: "https://ftc-docs.firstinspires.org/en/latest/programming_resources/blocks/Blocks-Tutorial.html", description: "Starter guide to blocks programming" },
-    { id: 2, name: "Cookbook", url: "https://cookbook.dairy.foundation", description: "Common issues" }
+export default function Vendors() {
+  // Define the sections with unique IDs for each row
+  const buildSystems = [
+    { id: 1, name: "REV Robotics", url: "https://www.revrobotics.com", description: "Common build system. Makes the control hub." },
+    { id: 2, name: "GoBilda", url: "https://www.gobilda.com", description: "Common build system. Makes viper slides." },
+    { id: 3, name: "AndyMark", url: "https://www.andymark.com", description: "Common build system. Makes the game field." },
   ];
 
-  const advancedSites = [
-    { id: 3, name: "CTRL ALT FTC", url: "https://www.ctrlaltftc.com", description: "Motor control and control theory." },
-    { id: 4, name: "Road Runner", url: "https://rr.brott.dev", description: "Utility to assist with pathing in autonomous." },
-    { id: 5, name: "Meep Meep", url: "https://github.com/rh-robotics/MeepMeep", description: "Visualise RoadRunner paths." },
-    { id: 6, name: "Dashboard", url: "https://acmerobotics.github.io/ftc-dashboard/", description: "Live data from robot." },
-    { id: 7, name: "Photon", url: "https://github.com/Eeshwar-Krishnan/PhotonFTC", description: "Library to speed up loop times." },
-    { id: 8, name: "Dairy", url: "https://docs.dairy.foundation/introduction", description: "Libraries for FTC" },
-    { id: 9, name: "FTCLib", url: "https://docs.ftclib.org/ftclib", description: "Libraries for FTC" }
+  const hardwareSites = [
+    { id: 4, name: "RS Components", url: "https://uk.rs-online.com/web/", description: "Lots of hardware." },
+    { id: 5, name: "Misumi", url: "https://uk.misumi-ec.com", description: "Makes SAR2/3xx slides." },
+    { id: 6, name: "CPC Farnel", url: "https://cpc.farnell.com", description: "General tinkering store." }
   ];
 
-  const visionSites = [
-    { id: 10, name: "EOCV-Sim", url: "https://deltacv.gitbook.io/eocv-sim", description: "Very useful tool in testing and creating vision pipelines." },
-    { id: 11, name: "FTC Docs (Outdated)", url: "https://ftc-docs.firstinspires.org/en/latest/programming_resources/vision/vision_overview/vision-overview.html#", description: "Basics of how the camera system works, but somewhat outdated." },
-    { id: 12, name: "PaperVision (Alpha)", url: "https://github.com/deltacv/PaperVision", description: "Visual system to create vision pipelines." }
+  const specialisedSuppliers = [
+    { id: 7, name: "Axon Robotics", url: "https://axon-robotics.com", description: "Sells strongest permitted servos." },
+    { id: 8, name: "MelonBotics", url: "https://www.melonbotics.com", description: "Excellent value parts, high rpm servos." },
+    { id: 9, name: "Optii", url: "https://optii.com.au/", description: "Highly popular odometry." },
+    { id: 10, name: "Sparkfun", url: "https://www.sparkfun.com", description: "Electronics for FTC" }
   ];
+  
+  const resellers = [
+    { id: 10, name: "Plex Robotics", url: "https://plexrobotics.com/en", description: "Excellent for UK/European teams." },
 
+  ];
   const [openDropdown, setOpenDropdown] = useState<number | null>(null); // Track the ID of the open dropdown
 
   const toggleDropdown = (id: number) => {
@@ -77,27 +79,34 @@ export default function PageName() {
         <SideMenu />
       </div>
       <div className="ml-16 md:ml-64 p-5 md:p-10 w-full">
-        
-        {/* General Section */}
-        <h2 className="text-5xl font-bold text-stone-900 dark:text-zinc-100 mb-4">Programming</h2>
+
+
+        <h2 className="text-5xl font-bold text-stone-900 dark:text-zinc-100 mb-4">Vendors</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
-          {renderSites(generalSites)}
+          {renderSites(buildSystems)}
         </div>
 
         <div className="h-10"></div>
 
-        {/* Advanced (Android Studio) Section */}
-        <h2 className="text-3xl font-bold text-stone-900 dark:text-zinc-100 mb-4">Advanced (Android Studio)</h2>
+        <h2 className="text-3xl font-bold text-stone-900 dark:text-zinc-100 mb-4">Hardware Suppliers</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
-          {renderSites(advancedSites)}
+          {renderSites(hardwareSites)}
         </div>
 
         <div className="h-10"></div>
 
-        {/* Advanced (Vision) Section */}
-        <h2 className="text-3xl font-bold text-stone-900 dark:text-zinc-100 mb-4">Advanced (Android Studio) - Vision</h2>
+
+        <h2 className="text-3xl font-bold text-stone-900 dark:text-zinc-100 mb-4">Specialised Suppliers</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
-          {renderSites(visionSites)}
+          {renderSites(specialisedSuppliers)}
+        </div>
+
+        <div className="h-10"></div>
+
+
+        <h2 className="text-3xl font-bold text-stone-900 dark:text-zinc-100 mb-4">Resellers</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+          {renderSites(resellers)}
         </div>
       </div>
     </div>
