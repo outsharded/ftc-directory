@@ -6,7 +6,7 @@ export default function HomePage() {
       <div className="fixed top-0 left-0 z-10 h-screen w-64">
         <SideMenu />
       </div>
-      <div className="absolute left-16 lg:left-64 p-10">
+      <div className="absolute left-16 md:left-64 p-10">
         <div className="text-2xl leading-relaxed">
           <h1 className="text-4xl font-bold mb-5">Welcome to the FTC Directory by Powercut Robotics</h1>
           <p className="mb-5">
