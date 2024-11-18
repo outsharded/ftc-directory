@@ -2,7 +2,7 @@ import SideMenu from "./sideMenu";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-stone-200 text-gray-900 dark:bg-gray-900 dark:text-zinc-200">
+    <div className="min-h-screen bg-zinc-300 text-gray-900 dark:bg-gray-900 dark:text-zinc-200">
       <div className="fixed top-0 left-0 z-10 h-screen w-64">
         <SideMenu />
       </div>
