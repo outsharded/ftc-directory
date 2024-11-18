@@ -29,7 +29,7 @@ export default function Teams() {
   };
 
   return (
-    <div className="min-h-screen w-screen bg-stone-200 dark:bg-gray-900 text-gray-900 dark:text-zinc-200 flex transition duration-300">
+    <div className="min-h-screen w-screen bg-stone-300 dark:bg-gray-900 text-gray-900 dark:text-zinc-200 flex transition duration-300">
       <div className="fixed top-0 left-0 z-10 w-16 md:w-64 transition-width duration-300">
         <SideMenu />
       </div>
