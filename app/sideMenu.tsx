@@ -14,7 +14,7 @@ const SideMenu: React.FC = () => {
 
   return (
     <div
-      className={`bg-stone-100 text-gray-900 dark:bg-gray-800 min-h-screen transition-all duration-300 ${
+      className={`bg-zinc-50 text-gray-900 dark:bg-gray-800 min-h-screen transition-all duration-300 ${
         isMenuOpen ? 'w-52' : 'w-16'
       } md:w-52`}
     >
@@ -39,7 +39,7 @@ const SideMenu: React.FC = () => {
       </div>
 
       {/* Logo */}
-      <div className={`md:block absolute left-0 bottom-20 z-10 p-2 md:top-0 md:left-0`}>
+      <div className={`md:block fixed w-16 md:w-24 left-0 bottom-0 z-10 p-2 md:top-0 md:left-0`}>
         <Link href="/" passHref>
           <Image
             src={logo}
@@ -62,7 +62,7 @@ const SideMenu: React.FC = () => {
               <div key={link} className="py-1">
                 <Link
                   href={`/${link}`}
-                  className="block py-2 px-3 text-gray-900 dark:text-zinc-200 hover:bg-gray-700 rounded-md"
+                  className="block py-2 px-3 text-gray-900 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-gray-700 rounded-md"
                 >
                   {link.charAt(0).toUpperCase() + link.slice(1)}
                 </Link>
