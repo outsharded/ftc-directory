@@ -14,7 +14,7 @@ const SideMenu: React.FC = () => {
 
   return (
     <div
-      className={`bg-slate-300 text-gray-900 dark:bg-gray-800 min-h-screen transition-all duration-300 ${
+      className={`bg-slate-400 text-gray-900 dark:bg-gray-800 min-h-screen transition-all duration-300 ${
         isMenuOpen ? 'w-52' : 'w-16'
       } md:w-52`}
     >
