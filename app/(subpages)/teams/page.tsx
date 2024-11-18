@@ -29,7 +29,7 @@ export default function Teams() {
   };
 
   return (
-    <div className="min-h-screen w-screen bg-stone-300 dark:bg-gray-900 text-gray-900 dark:text-zinc-200 flex transition duration-300">
+    <div className="min-h-screen w-screen bg-stone-400 dark:bg-gray-900 text-gray-900 dark:text-zinc-200 flex transition duration-300">
       <div className="fixed top-0 left-0 z-10 w-16 md:w-64 transition-width duration-300">
         <SideMenu />
       </div>
@@ -43,7 +43,7 @@ export default function Teams() {
          >
            {/* Indigo Section with Dropdown Button */}
            <div
-             className={`relative w-full bg-indigo-700 text-white text-center py-10 px-4 ${openSite === index ? "rounded-t-md" : "rounded-md"} flex items-center justify-between`}
+             className={`relative w-full bg-indigo-400 dark:bg-indigo-700 text-white text-center py-10 px-4 ${openSite === index ? "rounded-t-md" : "rounded-md"} flex items-center justify-between`}
            >
              <Link href={site.url}>
                <span className="text-xl font-extrabold tracking-tight opacity-100 w-full md:group-hover:opacity-0 md:text-center">{site.name}</span>
@@ -56,7 +56,7 @@ export default function Teams() {
                </div>
              </Link>
              <button
-               className="absolute right-0 h-full w-12 flex items-center justify-center md:hidden bg-indigo-700 hover:bg-indigo-800 rounded-r-md"
+               className="absolute right-0 h-full w-12 flex items-center justify-center md:hidden bg-indigo-400 hover:bg-indigo-500 dark:bg-indigo-700 dark:hover:bg-indigo-800 rounded-r-md"
                onClick={() => toggleDropdown(index)}
              >
                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
