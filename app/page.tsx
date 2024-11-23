@@ -11,7 +11,7 @@ export default function HomePage() {
           <h1 className="text-4xl font-bold mb-5">Welcome to the FTC Directory by Powercut Robotics</h1>
           <p className="mb-5">
             This website is designed to signpost teams to useful resources that 
-            they may not have found otherwise. Whether you&apos;re a rookie team just 
+            they may not have found otherwise. Take a look at the options in the menu to get started! Whether you&apos;re a rookie team just 
             starting out or a veteran looking for a competitive edge, we&apos;ve curated 
             a selection of links and tools to help you on your FIRST Tech Challenge 
             journey.
