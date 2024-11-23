@@ -13,8 +13,7 @@ export default function HomePage() {
             This website is designed to signpost teams to useful resources that 
             they may not have found otherwise. Take a look at the options in the menu to get started! Whether you&apos;re a rookie team just 
             starting out or a veteran looking for a competitive edge, we&apos;ve curated 
-            a selection of links and tools to help you on your FIRST Tech Challenge 
-            journey.
+            a selection of links and tools to help you on your FIRST Tech Challenge journey.
           </p>
           <p className="mb-5">
             Powercut Robotics is Team #25268, UK-497, and based in South London. 
