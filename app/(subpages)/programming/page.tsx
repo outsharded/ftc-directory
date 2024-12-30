@@ -20,6 +20,8 @@ export default function Programming() {
     { id: 3, name: "CTRL ALT FTC", url: "https://www.ctrlaltftc.com", description: "Motor control and control theory." },
     { id: 4, name: "Road Runner", url: "https://rr.brott.dev", description: "Utility to assist with pathing in autonomous." },
     { id: 5, name: "Meep Meep", url: "https://github.com/rh-robotics/MeepMeep", description: "Visualise RoadRunner paths." },
+    { id: 12, name: "Pedro Pathing", url: "https://pedropathing.com", description: "Newer, faster tool to assist with pathing in autonomous." },
+    { id: 13, name: "Pedro Pathing Visualiser", url: "https://pedro-path-generator.vercel.app", description: "Utility to assist with creating paths in Pedro." },
     { id: 6, name: "Dashboard", url: "https://acmerobotics.github.io/ftc-dashboard/", description: "Live data from robot." },
     { id: 7, name: "Photon", url: "https://github.com/Eeshwar-Krishnan/PhotonFTC", description: "Library to speed up loop times." },
     { id: 8, name: "Dairy", url: "https://docs.dairy.foundation/introduction", description: "Libraries for FTC" },
@@ -29,7 +31,7 @@ export default function Programming() {
   const visionSites: Site[] = [
     { id: 10, name: "EOCV-Sim", url: "https://deltacv.gitbook.io/eocv-sim", description: "Very useful tool in testing and creating vision pipelines." },
     { id: 11, name: "FTC Docs (Outdated)", url: "https://ftc-docs.firstinspires.org/en/latest/programming_resources/vision/vision_overview/vision-overview.html#", description: "Basics of how the camera system works, but somewhat outdated." },
-    { id: 12, name: "PaperVision (Alpha)", url: "https://github.com/deltacv/PaperVision", description: "Visual system to create vision pipelines." }
+    { id: 14, name: "PaperVision (Alpha)", url: "https://github.com/deltacv/PaperVision", description: "Visual system to create vision pipelines." }
   ];
 
   const [openSite, setOpenSite] = useState<number | null>(null);
